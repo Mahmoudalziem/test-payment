@@ -54,7 +54,9 @@ card.addEventListener('change', function(event) {
 
 // Handle form submission
 var form = document.getElementById('form-container');
+
 form.addEventListener('submit', function(event) {
+
     event.preventDefault();
 
     tap.createToken(card).then(function(result) {
@@ -77,7 +79,7 @@ form.addEventListener('submit', function(event) {
 
 function tapTokenHandler(token) {
     // Insert the token ID into the form so it gets submitted to the server
-    var form = document.getElementById('payment-form');
+    var form = document.getElementById('form-container');
     var hiddenInput = document.createElement('input');
     hiddenInput.setAttribute('type', 'hidden');
     hiddenInput.setAttribute('name', 'tapToken');
