@@ -68,9 +68,23 @@ form.addEventListener('submit', function(event) {
             var errorElement = document.getElementById('success');
             errorElement.style.display = "block";
             var tokenElement = document.getElementById('token');
-            tokenElement.textContent = result.id;
+            // tokenElement.textContent = result.id;
             tapTokenHandler(token)
 
         }
     });
 });
+
+
+function tapTokenHandler(token) {
+    // Insert the token ID into the form so it gets submitted to the server
+    var form = document.getElementById('payment-form');
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'tapToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+
+    // Submit the form
+    form.submit();
+}

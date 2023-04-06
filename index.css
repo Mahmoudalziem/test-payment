@@ -4,6 +4,17 @@
     background-color: #ededed;
 }
 
+html,
+body {
+    display: block !important;
+}
+
+.brands-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 #card-element {
     background-color: transparent;
     height: 40px;
