@@ -69,8 +69,7 @@ form.addEventListener('submit', function(event) {
             errorElement.style.display = "block";
             var tokenElement = document.getElementById('token');
             // tokenElement.textContent = result.id;
-            tapTokenHandler(token)
-
+            tapTokenHandler(result)
         }
     });
 });
