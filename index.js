@@ -87,5 +87,5 @@ function tapTokenHandler(token) {
     form.appendChild(hiddenInput);
 
     // Submit the form
-    form.submit();
+    // form.submit();
 }
